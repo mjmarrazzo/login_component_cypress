@@ -1,0 +1,1 @@
+A small example of how to test the login component of https://the-internet.herokuapp.com/login.

@@ -13,7 +13,7 @@ describe('Login Component', () => {
 
     context('Successful Login', () => {
 
-        it('Correct username and password should allow login on click', () => {
+        it('Correct username and password results in success', () => {
             login(validUsername, validPassword);
             assertSuccessfulLogin();
         });
@@ -38,6 +38,11 @@ describe('Login Component', () => {
         it('Empty password results in failure', () => {
             login(validUsername, '');
             assertFailedLogin('password');
+        });
+
+        it('Empty username & password results in failure', () => {
+            login('', '');
+            assertFailedLogin('username');
         });
 
         it('Incorrect casing results in failure', () => {
